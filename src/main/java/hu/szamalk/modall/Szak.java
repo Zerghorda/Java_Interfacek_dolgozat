@@ -68,11 +68,45 @@ public class Szak implements Serializable,Comparable<Szak> {
         }
     }
 
+
+
+
+    private String vizsgaTargyak() {
+        return null;
+    }
+    private int osszesKreedit() {
+        int osszeg = 0;
+        for (int i = 0; i < targyak.size(); i++) {
+           osszeg += targyak.get(i).getKredit();
+        }
+        return osszeg;
+    }
+
     private String minKredit() {
         String eredmeny = "";
-        for (int i = 0; i < ; i++) {
+        int min = 1;
+        String targy = "";
+        for (int i = 1; i < targyak.size(); i++) {
+            if (targyak.get(i).getKredit() <min){
+                min = targyak.get(i).getKredit();
+                targy = targyak.get(i).getNev();
+            }
             
         }
+        return eredmeny+= targy + ", " + min;
+    }
+    private String maxKredit() {
+        String eredmeny = "";
+        int max = 1;
+        String targy = "";
+        for (int i = 1; i < targyak.size(); i++) {
+            if (targyak.get(i).getKredit() > max){
+                max = targyak.get(i).getKredit();
+                targy = targyak.get(i).getNev();
+            }
+
+        }
+        return eredmeny+= targy + ", " + max;
     }
 
     private int kulombozoTargy() {
