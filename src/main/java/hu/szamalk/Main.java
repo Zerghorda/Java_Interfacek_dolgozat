@@ -19,6 +19,7 @@ public class Main {
         szak.getTargyak().sort(Szak.rendezKredit());
         System.out.println("Kredit szerint rendezés:");
         System.out.println(szak.targyak);
+        System.out.println("nem jó a statisztika!");
     }
 
 }
